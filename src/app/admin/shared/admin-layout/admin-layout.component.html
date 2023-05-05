@@ -13,14 +13,13 @@
       <a [routerLink]="['/admin', 'orders']">Orders</a>
     </li>
     <li routerLink="active">
-      <a [routerLink]="['/admin', '']">Logout</a>
+      <a href="#" (click)="logout($event)">Logout</a>
     </li>
     <li routerLink="active">
       <a [routerLink]="['/admin', 'login']">Login</a>
     </li>
   </ul>
 </nav>
-
 <div class="container">
   <router-outlet></router-outlet>
 </div>
