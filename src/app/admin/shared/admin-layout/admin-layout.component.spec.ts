@@ -8,7 +8,7 @@ describe('AdminLayoutComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AdminLayoutComponent]
+      declarations: [AdminLayoutComponent],
     });
     fixture = TestBed.createComponent(AdminLayoutComponent);
     component = fixture.componentInstance;

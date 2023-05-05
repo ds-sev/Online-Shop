@@ -14,13 +14,10 @@ import { CardPageComponent } from './cart-page/cart-page.component';
     MainLayoutComponent,
     MainPageComponent,
     ProductPageComponent,
-    CardPageComponent
+    CardPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

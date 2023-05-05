@@ -7,8 +7,7 @@ import { AddPageComponent } from './add-page/add-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { OrdersPageComponent } from './orders-page/orders-page.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -17,25 +16,26 @@ import { OrdersPageComponent } from './orders-page/orders-page.component';
     AddPageComponent,
     DashboardPageComponent,
     EditPageComponent,
-    OrdersPageComponent
+    OrdersPageComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
-        path: '', component: AdminLayoutComponent, children: [
+        path: '',
+        component: AdminLayoutComponent,
+        children: [
           {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
           {path: 'login', component: LoginPageComponent},
           {path: 'dashboard', component: DashboardPageComponent},
           {path: 'add', component: AddPageComponent},
           {path: 'orders', component: OrdersPageComponent},
-          {path: 'product/:id/:edit', component: EditPageComponent}
-        ]
-      }
-    ])
+          {path: 'product/:id/:edit', component: EditPageComponent},
+        ],
+      },
+    ]),
+    ReactiveFormsModule,
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdminModule {
-  
- }
+export class AdminModule {}

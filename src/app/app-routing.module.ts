@@ -8,20 +8,24 @@ import { AdminModule } from './admin/admin.module';
 
 const routes: Routes = [
   {
-    path: '', component: MainLayoutComponent, children: [
-      {path: '', redirectTo: '/', pathMatch: 'full'},
-      {path: '', component: MainPageComponent},
-      {path: 'product/:id', component: ProductPageComponent},
-      {path: 'cart', component: CardPageComponent}
-    ]
+    path: '',
+    component: MainLayoutComponent,
+    children: [
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      { path: '', component: MainPageComponent },
+      { path: 'product/:id', component: ProductPageComponent },
+      { path: 'cart', component: CardPageComponent },
+    ],
   },
   {
-    path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
-  }
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
